@@ -3,776 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Gabriel V. Israel - Web & System Developer | IoT & Full-Stack Solutions</title>
-    <meta name="title" content="Gabriel V. Israel - Web & System Developer | IoT & Full-Stack Solutions">
-    <meta name="description" content="Full-stack web and system developer specializing in IoT integration, real-time data systems, Arduino projects, PHP, PostgreSQL, and modern web development. View my portfolio of innovative projects.">
-    <meta name="keywords" content="web developer, system developer, IoT developer, Arduino, PHP developer, PostgreSQL, full-stack developer, earthquake monitoring, weather API, landing pages, Gabriel Israel, gabhub07">
+    <title>Gabriel V. Israel - Full-Stack & System Developer | UI/UX and Data Skills</title>
+    <meta name="title" content="Gabriel V. Israel - Full-Stack & System Developer | UI/UX and Data Skills">
+    <meta name="description" content="Portfolio of Gabriel V. Israel, a full-stack and system developer skilled in PHP, PostgreSQL, JavaScript, IoT systems, UI/UX design, Microsoft Excel, and data analysis.">
+    <meta name="keywords" content="Gabriel Israel, gabhub07, full-stack developer, system developer, PHP, PostgreSQL, JavaScript, UI UX design, Microsoft Excel, data analysis, TESDA, Coursera, portfolio">
     <meta name="author" content="Gabriel V. Israel">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gabhub07.github.io/">
-    <meta property="og:title" content="Gabriel V. Israel - Web & System Developer">
-    <meta property="og:description" content="Full-stack developer specializing in IoT, web systems, and database solutions. Expert in Arduino, PHP, PostgreSQL, and modern web technologies.">
+    <meta property="og:title" content="Gabriel V. Israel - Full-Stack & System Developer">
+    <meta property="og:description" content="Full-stack and system developer focused on web systems, database solutions, automation, UI/UX, and data-oriented development.">
     <meta property="og:image" content="https://gabhub07.github.io/me.jpg">
-    
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gabhub07.github.io/">
-    <meta property="twitter:title" content="Gabriel V. Israel - Web & System Developer">
-    <meta property="twitter:description" content="Full-stack developer specializing in IoT, web systems, and database solutions.">
+    <meta property="twitter:title" content="Gabriel V. Israel - Full-Stack & System Developer">
+    <meta property="twitter:description" content="Portfolio showcasing web systems, databases, UI/UX design, Excel, data analysis, and automation projects.">
     <meta property="twitter:image" content="https://gabhub07.github.io/me.jpg">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://gabhub07.github.io/">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Gabriel V. Israel",
-        "jobTitle": "Web & System Developer",
+        "jobTitle": "Full-Stack and System Developer",
         "url": "https://gabhub07.github.io/",
-        "sameAs": [
-            "https://github.com/gabhub07"
-        ],
+        "sameAs": ["https://github.com/gabhub07"],
         "email": "learsi.gabriel07@gmail.com",
-        "description": "Full-stack web and system developer specializing in IoT integration, real-time data systems, and modern web development",
-        "knowsAbout": ["Web Development", "IoT", "Arduino", "PHP", "PostgreSQL", "System Development", "Real-time Systems"],
-        "alumniOf": {
-            "@type": "Organization",
-            "name": "Developer"
-        }
+        "description": "Full-stack and system developer specializing in web systems, database solutions, UI/UX design, Excel, data analysis, and automation.",
+        "knowsAbout": ["Web Development", "System Development", "PHP", "PostgreSQL", "JavaScript", "UI Design", "UX Design", "Microsoft Excel", "Data Analysis", "IoT"]
     }
     </script>
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary: #0ea5e9;
-            --secondary: #8b5cf6;
-            --dark: #0f172a;
-            --darker: #020617;
-            --light: #f1f5f9;
-            --accent: #06b6d4;
+            --primary: #0ea5e9; --secondary: #8b5cf6; --dark: #0f172a; --darker: #020617;
+            --light: #f1f5f9; --muted: #94a3b8; --accent: #06b6d4; --card: rgba(15, 23, 42, 0.72);
         }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--darker);
-            color: var(--light);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        .cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--primary);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: 0.1s;
-            mix-blend-mode: difference;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            backdrop-filter: blur(20px);
-            background: rgba(15, 23, 42, 0.8);
-            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-            position: relative;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 6rem 10%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.15), transparent);
-            border-radius: 50%;
-            top: -200px;
-            right: -200px;
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent);
-            border-radius: 50%;
-            bottom: -150px;
-            left: -150px;
-            animation: pulse 4s ease-in-out infinite 2s;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .hero-content {
-            text-align: center;
-            animation: fadeInUp 1s ease;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .profile-image-container {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 2rem;
-            position: relative;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary);
-            box-shadow: 0 0 40px rgba(14, 165, 233, 0.4);
-            transition: 0.3s;
-        }
-
-        .profile-image-container::before {
-            content: '';
-            position: absolute;
-            inset: -10px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            opacity: 0.3;
-            z-index: -1;
-            animation: rotate 8s linear infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .profile-image-container:hover .profile-image {
-            transform: scale(1.05);
-            box-shadow: 0 0 60px rgba(14, 165, 233, 0.6);
-        }
-
-        .hero-tag {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            border-radius: 50px;
-            color: var(--primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -2px;
-        }
-
-        .hero h2 {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            margin-bottom: 1.5rem;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            margin-bottom: 2.5rem;
-            opacity: 0.8;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            transition: 0.3s;
-            border: 2px solid var(--primary);
-        }
-
-        .cta-button:hover {
-            background: transparent;
-            color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            border: 2px solid var(--light);
-            color: var(--light);
-        }
-
-        .cta-button.secondary:hover {
-            background: var(--light);
-            color: var(--dark);
-        }
-
-        .section {
-            padding: 6rem 5%;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            text-align: center;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--accent);
-            margin-bottom: 4rem;
-            font-size: 1.1rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: 0.3s;
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transform: scaleX(0);
-            transition: 0.3s;
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
-        }
-
-        .project-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .project-card p {
-            opacity: 0.8;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tech-tag {
-            padding: 0.4rem 1rem;
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--accent);
-            font-weight: 500;
-        }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-category {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: 0.3s;
-        }
-
-        .skill-category:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-icon {
-            font-size: 1.5rem;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.7rem 0;
-            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
-            opacity: 0.9;
-        }
-
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-
-        .contact-section {
-            background: rgba(15, 23, 42, 0.5);
-        }
-
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem 2rem;
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 15px;
-            transition: 0.3s;
-        }
-
-        .contact-item:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid rgba(14, 165, 233, 0.1);
-            opacity: 0.7;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--darker); color: var(--light); overflow-x: hidden; line-height: 1.6; }
+        body::before { content: ''; position: fixed; inset: 0; background: radial-gradient(circle at 15% 20%, rgba(14,165,233,.16), transparent 30%), radial-gradient(circle at 85% 10%, rgba(139,92,246,.18), transparent 32%), radial-gradient(circle at 50% 90%, rgba(6,182,212,.10), transparent 35%); pointer-events: none; z-index: -1; }
+        .cursor { width: 18px; height: 18px; border: 2px solid var(--primary); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: .08s; mix-blend-mode: difference; }
+        nav { position: fixed; top: 0; width: 100%; padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; backdrop-filter: blur(20px); background: rgba(2, 6, 23, .78); border-bottom: 1px solid rgba(14,165,233,.14); }
+        .logo { font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+        .nav-links a { color: var(--light); text-decoration: none; font-weight: 600; font-size: .92rem; opacity: .88; transition: .25s; }
+        .nav-links a:hover { color: var(--primary); opacity: 1; }
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 7rem 8% 5rem; text-align: center; }
+        .hero-content { max-width: 940px; animation: fadeInUp .9s ease; }
+        .profile-image-container { width: 190px; height: 190px; margin: 0 auto 2rem; position: relative; animation: float 3s ease-in-out infinite; }
+        .profile-image { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 15%; border: 4px solid var(--primary); box-shadow: 0 0 45px rgba(14,165,233,.42); }
+        .profile-image-container::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); opacity: .28; z-index: -1; animation: rotate 8s linear infinite; }
+        .hero-tag { display: inline-flex; gap: .5rem; align-items: center; padding: .55rem 1.4rem; background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.32); border-radius: 999px; color: var(--primary); font-size: .88rem; font-weight: 800; letter-spacing: .08em; margin-bottom: 1.3rem; }
+        .hero h1 { font-size: clamp(2.6rem, 8vw, 5.2rem); line-height: 1.02; font-weight: 950; margin-bottom: 1rem; background: linear-gradient(135deg, #fff, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -2.5px; }
+        .hero h2 { font-size: clamp(1.1rem, 3vw, 2rem); margin-bottom: 1.2rem; color: var(--accent); font-weight: 700; }
+        .hero p { font-size: clamp(1rem, 2vw, 1.18rem); color: var(--muted); max-width: 720px; margin: 0 auto 2.3rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta-button { display: inline-block; padding: .95rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 12px; font-weight: 800; border: 2px solid var(--primary); transition: .25s; }
+        .cta-button:hover { background: transparent; color: var(--primary); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(14,165,233,.25); }
+        .cta-button.secondary { background: transparent; border-color: rgba(241,245,249,.65); color: var(--light); }
+        .cta-button.secondary:hover { background: var(--light); color: var(--dark); }
+        .section { padding: 5.5rem 5%; }
+        .section-title { font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: .6rem; font-weight: 900; letter-spacing: -1px; }
+        .section-subtitle { text-align: center; color: var(--accent); margin: 0 auto 3.2rem; font-size: 1.06rem; max-width: 760px; }
+        .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; max-width: 1120px; margin: 0 auto; }
+        .glass-card, .project-card, .skill-category, .certificate-card, .timeline-item { background: var(--card); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.09); border-radius: 22px; box-shadow: 0 20px 50px rgba(0,0,0,.18); }
+        .about-card { padding: 2.2rem; }
+        .about-card p { color: var(--muted); margin-bottom: 1rem; }
+        .quick-facts { padding: 2rem; display: grid; gap: 1rem; }
+        .fact { padding: 1rem; border-radius: 16px; background: rgba(14,165,233,.07); border: 1px solid rgba(14,165,233,.16); }
+        .fact strong { display: block; color: #fff; }
+        .fact span { color: var(--muted); font-size: .95rem; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1120px; margin: 2.5rem auto 0; }
+        .stat { text-align: center; padding: 1.5rem; border-radius: 18px; background: rgba(15,23,42,.58); border: 1px solid rgba(14,165,233,.16); }
+        .stat strong { display: block; font-size: 2rem; color: var(--primary); }
+        .stat span { color: var(--muted); font-size: .92rem; }
+        .projects-grid, .skills-container, .certificates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.6rem; max-width: 1180px; margin: 0 auto; }
+        .project-card, .skill-category, .certificate-card { padding: 2rem; transition: .25s; position: relative; overflow: hidden; }
+        .project-card::before, .certificate-card::before, .skill-category::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); transform: scaleX(0); transform-origin: left; transition: .25s; }
+        .project-card:hover, .skill-category:hover, .certificate-card:hover { transform: translateY(-7px); border-color: rgba(14,165,233,.55); }
+        .project-card:hover::before, .certificate-card:hover::before, .skill-category:hover::before { transform: scaleX(1); }
+        .project-card h3, .certificate-card h3 { font-size: 1.35rem; margin-bottom: .75rem; color: #fff; }
+        .project-card p, .certificate-card p { color: var(--muted); margin-bottom: 1rem; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.1rem; }
+        .tech-tag, .certificate-badge { padding: .36rem .85rem; background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.28); border-radius: 999px; font-size: .82rem; color: var(--accent); font-weight: 700; }
+        .skill-category h3 { color: var(--primary); margin-bottom: 1rem; }
+        .skill-list { list-style: none; color: var(--muted); }
+        .skill-list li { padding: .55rem 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+        .skill-list li:last-child { border-bottom: 0; }
+        .certificate-badge { display: inline-block; margin-bottom: 1rem; }
+        .issuer { color: #dbeafe !important; font-weight: 700; margin-bottom: .2rem !important; }
+        .date { font-size: .92rem; }
+        .cert-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.2rem; }
+        .cert-actions a { color: #fff; text-decoration: none; font-weight: 800; font-size: .9rem; padding: .65rem .9rem; border-radius: 10px; background: rgba(14,165,233,.14); border: 1px solid rgba(14,165,233,.28); }
+        .timeline { max-width: 900px; margin: 0 auto; display: grid; gap: 1rem; }
+        .timeline-item { padding: 1.4rem 1.6rem; display: grid; grid-template-columns: 120px 1fr; gap: 1rem; }
+        .timeline-year { color: var(--primary); font-weight: 900; }
+        .timeline-item h3 { margin-bottom: .4rem; }
+        .timeline-item p { color: var(--muted); }
+        .contact-section { background: rgba(15,23,42,.30); }
+        .contact-content { max-width: 850px; margin: 0 auto; text-align: center; }
+        .contact-info { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; }
+        .contact-item { display: flex; align-items: center; gap: .9rem; padding: 1.25rem 1.5rem; background: var(--card); border: 1px solid rgba(14,165,233,.18); border-radius: 16px; }
+        .contact-icon { font-size: 1.8rem; color: var(--primary); }
+        footer { text-align: center; padding: 2rem; border-top: 1px solid rgba(14,165,233,.1); color: var(--muted); }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @media (max-width: 900px) { .about-grid, .stats { grid-template-columns: 1fr; } .nav-links { gap: .85rem; } .timeline-item { grid-template-columns: 1fr; } }
+        @media (max-width: 680px) { nav { align-items: flex-start; gap: .8rem; flex-direction: column; } .nav-links { flex-wrap: wrap; } .hero { padding-top: 10rem; } .cursor { display: none; } }
     </style>
 </head>
 <body>
     <div class="cursor"></div>
-
     <nav role="navigation" aria-label="Main navigation">
         <div class="logo">GVI</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
-                <div class="profile-image-container">
-                    <img src="me.jpg" alt="Gabriel V. Israel - Web and System Developer" class="profile-image" id="profileImage">
-                </div>
-                <div class="hero-tag">WEB & SYSTEM DEVELOPER</div>
+                <div class="profile-image-container"><img src="me.jpg" alt="Gabriel V. Israel - Full-stack and system developer" class="profile-image"></div>
+                <div class="hero-tag">FULL-STACK • SYSTEMS • UI/UX</div>
                 <h1>Gabriel V. Israel</h1>
-                <h2>Building Innovative Systems & Web Solutions</h2>
-                <p>Specialized in Web and System development, IoT integration, and real-time data systems. Creating scalable solutions from evaluation platforms to Arduino-powered monitoring systems.</p>
+                <h2>Full-Stack Developer & System Developer</h2>
+                <p>I build web applications, database-driven systems, automation tools, and user-centered interfaces. My work combines development, data organization, UI/UX design, and practical system solutions for real-world academic and business needs.</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="cta-button" aria-label="View my projects">View Projects</a>
-                    <a href="#contact" class="cta-button secondary" aria-label="Contact me">Get In Touch</a>
+                    <a href="#projects" class="cta-button">View Projects</a>
+                    <a href="#certificates" class="cta-button secondary">View Certificates</a>
+                    <a href="gab-cv.docx" class="cta-button secondary" download>Download CV</a>
                 </div>
             </div>
         </section>
-
+        <section class="section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">A computer science student focused on building practical digital systems and improving user experiences.</p>
+            <div class="about-grid">
+                <article class="glass-card about-card">
+                    <p>I am a Bachelor of Science in Computer Science student at the Philippine Technological Institute of Science, Arts and Trade – Central Inc. with hands-on experience as a Student Assistant, where I supported administrative operations, data entry, file management, and student services.</p>
+                    <p>My technical interests include full-stack web development, database management, system automation, UI/UX design, Microsoft Excel, data analysis, and IoT-based monitoring systems. I enjoy creating tools that make school and office workflows faster, organized, and easier to manage.</p>
+                    <p>I am currently strengthening my portfolio through real-world systems, certifications, and continuous project development.</p>
+                </article>
+                <aside class="glass-card quick-facts">
+                    <div class="fact"><strong>Education</strong><span>BS Computer Science, 4th Year Undergraduate</span></div>
+                    <div class="fact"><strong>Location</strong><span>Gen. Mariano Alvarez, Cavite</span></div>
+                    <div class="fact"><strong>Focus</strong><span>Web Systems, Databases, Automation, UI/UX</span></div>
+                    <div class="fact"><strong>Portfolio</strong><span>gabhub07.github.io</span></div>
+                </aside>
+            </div>
+            <div class="stats">
+                <div class="stat"><strong>9</strong><span>Recent Certificates</span></div>
+                <div class="stat"><strong>5+</strong><span>Featured Projects</span></div>
+                <div class="stat"><strong>2024-2026</strong><span>Student Assistant Experience</span></div>
+                <div class="stat"><strong>4th Year</strong><span>Computer Science</span></div>
+            </div>
+        </section>
         <section class="section" id="projects">
             <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Real-world solutions combining web development, databases, and hardware integration</p>
-            
+            <p class="section-subtitle">Selected systems and development work focused on automation, databases, monitoring, and digital workflows.</p>
             <div class="projects-grid">
-                <article class="project-card">
-                    <h3>Evaluation System</h3>
-                    <p>Comprehensive evaluation platform with robust database management. Features include real-time data processing, user authentication, reporting dashboards, and automated analytics for streamlined performance tracking.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Dashboard</span>
-                        <span class="tech-tag">Analytics</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Render Hosting</span>
-                        <span class="tech-tag">GitHub</span>
-                        <span class="tech-tag">API</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3>Earthquake Detector System</h3>
-                    <p>IoT-based seismic monitoring system using Arduino sensors with real-time database logging. Monitors ground movement, sends alerts, and maintains historical data for analysis and early warning capabilities.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Arduino</span>
-                        <span class="tech-tag">IoT</span>
-                        <span class="tech-tag">Real-time DB</span>
-                        <span class="tech-tag">Sensors</span>
-                        <span class="tech-tag">C#</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3>Real-Time Weather Extractor</h3>
-                    <p>Live weather data extraction and visualization system. Pulls data from weather APIs, processes meteorological information, and displays current conditions with forecasting capabilities and historical trends.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">API Integration</span>
-                        <span class="tech-tag">Real-time Data</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Visualization</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <h3>Landing Pages & Websites</h3>
-                    <p>Modern, responsive landing pages and full websites with engaging UI/UX. Optimized for performance, SEO-friendly, and built with latest web standards for maximum conversion and user engagement.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive</span>
-                        <span class="tech-tag">Modern UI</span>
-                    </div>
-                </article>
+                <article class="project-card"><h3>Student and Faculty Evaluation System</h3><p>A database-driven evaluation platform designed to help collect, organize, and process evaluation records for students and faculty. Built to support structured feedback, reporting, and efficient record management.</p><div class="tech-tags"><span class="tech-tag">PHP</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Dashboard</span><span class="tech-tag">GitHub</span></div></article>
+                <article class="project-card"><h3>Philtech GMA Payroll Management System</h3><p>A web-based payroll management system for school operations, covering employee records, attendance tracking, payroll computation, role-based dashboards, and payslip generation.</p><div class="tech-tags"><span class="tech-tag">PHP</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Render</span><span class="tech-tag">System Design</span></div></article>
+                <article class="project-card"><h3>E-Class Record Automation System</h3><p>An academic record automation project for grade computation, attendance tracking, student view summaries, and spreadsheet-based academic reporting.</p><div class="tech-tags"><span class="tech-tag">Excel</span><span class="tech-tag">Google Sheets</span><span class="tech-tag">Formulas</span><span class="tech-tag">Automation</span><span class="tech-tag">Data Organization</span></div></article>
+                <article class="project-card"><h3>Earthquake Detector System</h3><p>An IoT-based seismic monitoring project using hardware sensors and software integration to monitor movement, log readings, and support real-time alert concepts.</p><div class="tech-tags"><span class="tech-tag">Arduino</span><span class="tech-tag">IoT</span><span class="tech-tag">Sensors</span><span class="tech-tag">C#</span><span class="tech-tag">Monitoring</span></div></article>
+                <article class="project-card"><h3>Landing Pages & Responsive Websites</h3><p>Modern responsive web pages focused on clean layouts, usability, SEO-friendly structure, and accessible interface design for different project needs.</p><div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span><span class="tech-tag">SEO</span><span class="tech-tag">Responsive Design</span></div></article>
+                <article class="project-card"><h3>Real-Time Weather Data Extractor</h3><p>A data extraction and visualization project that uses external weather data to display current conditions and support simple trend monitoring.</p><div class="tech-tags"><span class="tech-tag">API Integration</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Real-Time Data</span><span class="tech-tag">Visualization</span></div></article>
             </div>
         </section>
-
         <section class="section" id="skills">
             <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Full-stack expertise across web, database, and hardware systems</p>
-            
+            <p class="section-subtitle">A balanced skill set across development, databases, design, data, and productivity tools.</p>
             <div class="skills-container">
-                <article class="skill-category">
-                    <h3><span class="skill-icon">💻</span> Frontend Development</h3>
-                    <ul class="skill-list">
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>Responsive Web Design</li>
-                        <li>Modern UI/UX Implementation</li>
-                        <li>Landing Page Development</li>
-                    </ul>
+                <article class="skill-category"><h3>Frontend Development</h3><ul class="skill-list"><li>HTML5, CSS3, JavaScript</li><li>Responsive Web Design</li><li>Modern UI Implementation</li><li>Landing Page Development</li></ul></article>
+                <article class="skill-category"><h3>Backend & Systems</h3><ul class="skill-list"><li>PHP Development</li><li>REST API Concepts</li><li>System Architecture</li><li>Authentication and Role-Based Access</li></ul></article>
+                <article class="skill-category"><h3>Database & Data</h3><ul class="skill-list"><li>PostgreSQL and MySQL</li><li>Database Design</li><li>Data Organization</li><li>Microsoft Excel and Data Analysis</li></ul></article>
+                <article class="skill-category"><h3>UI/UX & Design</h3><ul class="skill-list"><li>User Interface Design</li><li>User Experience Design</li><li>Logo, Print, and Product Design Basics</li><li>Visual Graphic Design</li></ul></article>
+                <article class="skill-category"><h3>IoT & Hardware</h3><ul class="skill-list"><li>Arduino Programming</li><li>Sensor Integration</li><li>Hardware-Software Communication</li><li>Monitoring System Concepts</li></ul></article>
+                <article class="skill-category"><h3>Tools</h3><ul class="skill-list"><li>GitHub and Version Control</li><li>VS Code and Arduino IDE</li><li>Docker and Deployment Tools</li><li>Chrome DevTools</li></ul></article>
+            </div>
+        </section>
+        <section class="section" id="certificates">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Recent learning achievements in Microsoft Excel, data analysis, UI/UX, and visual graphic design.</p>
+            <div class="certificates-grid">
+                <article class="certificate-card">
+                    <div class="certificate-badge">Microsoft Excel</div>
+                    <h3>Getting Started with Microsoft Excel</h3>
+                    <p class="issuer">Coursera</p>
+                    <p class="date">May 3, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-01-getting-started-with-microsoft-excel.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        <a href="https://coursera.org/verify/K5D8215WVJQ0" target="_blank" rel="noopener noreferrer">Verify</a>
+                    </div>
                 </article>
-
-                <article class="skill-category">
-                    <h3><span class="skill-icon">⚙️</span> Backend & Systems</h3>
-                    <ul class="skill-list">
-                        <li>PHP</li>
-                        <li>RESTful API Development</li>
-                        <li>Real-time Data Processing</li>
-                        <li>System Architecture</li>
-                    </ul>
+<article class="certificate-card">
+                    <div class="certificate-badge">Data Analysis</div>
+                    <h3>Introduction to Data Analysis using Microsoft Excel</h3>
+                    <p class="issuer">Coursera</p>
+                    <p class="date">May 3, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-02-introduction-to-data-analysis-using-microsoft-excel.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        <a href="https://coursera.org/verify/0OWL9XMX7EPX" target="_blank" rel="noopener noreferrer">Verify</a>
+                    </div>
                 </article>
-
-                <article class="skill-category">
-                    <h3><span class="skill-icon">🗄️</span> Database Management</h3>
-                    <ul class="skill-list">
-                        <li>MySQL / PostgreSQL</li>
-                        <li>Database Design & Optimization</li>
-                        <li>Data Migration & Integration</li>
-                        <li>Query Optimization</li>
-                    </ul>
+<article class="certificate-card">
+                    <div class="certificate-badge">Graphic Design</div>
+                    <h3>Introduction to Visual Graphic Design</h3>
+                    <p class="issuer">TESDA Online Program</p>
+                    <p class="date">May 14, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-03-introduction-to-visual-graphic-design.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        
+                    </div>
                 </article>
-
-                <article class="skill-category">
-                    <h3><span class="skill-icon">🔧</span> IoT & Hardware</h3>
-                    <ul class="skill-list">
-                        <li>Arduino Programming</li>
-                        <li>Sensor Integration</li>
-                        <li>Hardware-Software Communication</li>
-                        <li>Real-time Monitoring Systems</li>
-                    </ul>
+<article class="certificate-card">
+                    <div class="certificate-badge">UI Design</div>
+                    <h3>Developing Designs for User Interface</h3>
+                    <p class="issuer">TESDA Online Program</p>
+                    <p class="date">May 15, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-04-developing-designs-for-user-interface.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        
+                    </div>
                 </article>
-
-                <article class="skill-category">
-                    <h3><span class="skill-icon">🚀</span> Additional Skills</h3>
-                    <ul class="skill-list">
-                        <li>API Integration & Development</li>
-                        <li>Version Control (GitHub)</li>
-                        <li>Web Performance Optimization</li>
-                        <li>Project Management</li>
-                    </ul>
+<article class="certificate-card">
+                    <div class="certificate-badge">UX Design</div>
+                    <h3>Developing Designs for User Experience</h3>
+                    <p class="issuer">TESDA Online Program</p>
+                    <p class="date">May 15, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-05-developing-designs-for-user-experience.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        
+                    </div>
                 </article>
-
-                <article class="skill-category">
-                    <h3><span class="skill-icon">🛠️</span> Tools & Technologies</h3>
-                    <ul class="skill-list">
-                        <li>VS Code, Arduino IDE</li>
-                        <li>phpMyAdmin</li>
-                        <li>GitHub, Deployment Tools</li>
-                        <li>Chrome DevTools</li>
-                    </ul>
+<article class="certificate-card">
+                    <div class="certificate-badge">Logo Design</div>
+                    <h3>Developing Designs for a Logo</h3>
+                    <p class="issuer">TESDA Online Program</p>
+                    <p class="date">May 15, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-06-developing-designs-for-a-logo.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        
+                    </div>
+                </article>
+<article class="certificate-card">
+                    <div class="certificate-badge">Print Media</div>
+                    <h3>Developing Designs for Print Media</h3>
+                    <p class="issuer">TESDA Online Program</p>
+                    <p class="date">May 15, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-07-developing-designs-for-print-media.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        
+                    </div>
+                </article>
+<article class="certificate-card">
+                    <div class="certificate-badge">Packaging</div>
+                    <h3>Developing Designs for Product Packaging</h3>
+                    <p class="issuer">TESDA Online Program</p>
+                    <p class="date">May 15, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-08-developing-designs-for-product-packaging.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        
+                    </div>
+                </article>
+<article class="certificate-card">
+                    <div class="certificate-badge">Booth Display</div>
+                    <h3>Designing Booth and Product/Window Display</h3>
+                    <p class="issuer">TESDA Online Program</p>
+                    <p class="date">May 15, 2026</p>
+                    <div class="cert-actions">
+                        <a href="certificates/certificate-09-designing-booth-and-product-window-display.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                        
+                    </div>
                 </article>
             </div>
         </section>
-
+        <section class="section" id="timeline">
+            <h2 class="section-title">Growth Timeline</h2>
+            <p class="section-subtitle">A simple overview of my recent academic, work, and skill-development progress.</p>
+            <div class="timeline">
+                <article class="timeline-item"><div class="timeline-year">2026</div><div><h3>Completed Excel, Data Analysis, UI/UX, and Graphic Design Certifications</h3><p>Earned Coursera and TESDA Online Program certificates to strengthen productivity, data, and design skills.</p></div></article>
+                <article class="timeline-item"><div class="timeline-year">2025-2026</div><div><h3>Built and Improved Web-Based Systems</h3><p>Worked on evaluation, payroll, academic record, and responsive web projects using web and database technologies.</p></div></article>
+                <article class="timeline-item"><div class="timeline-year">2024-2026</div><div><h3>Student Assistant Experience</h3><p>Supported office operations, customer service, file management, data entry, and campus event assistance.</p></div></article>
+            </div>
+        </section>
         <section class="section contact-section" id="contact">
             <div class="contact-content">
                 <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">Have a project in mind? Let's create something amazing together</p>
-                
+                <p class="section-subtitle">Open to projects, internships, collaborations, and opportunities related to web systems, databases, automation, and UI/UX.</p>
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <strong>Email</strong><br>
-                            <a href="mailto:learsi.gabriel07@gmail.com" style="color: var(--light); text-decoration: none;">learsi.gabriel07@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">💻</div>
-                        <div>
-                            <strong>GitHub</strong><br>
-                            <a href="https://github.com/gabhub07" target="_blank" rel="noopener noreferrer" style="color: var(--light); text-decoration: none;">github.com/gabhub07</a>
-                        </div>
-                    </div>
+                    <div class="contact-item"><div class="contact-icon">📧</div><div><strong>Email</strong><br><a href="mailto:learsi.gabriel07@gmail.com" style="color: var(--light); text-decoration: none;">learsi.gabriel07@gmail.com</a></div></div>
+                    <div class="contact-item"><div class="contact-icon">💻</div><div><strong>GitHub</strong><br><a href="https://github.com/gabhub07" target="_blank" rel="noopener noreferrer" style="color: var(--light); text-decoration: none;">github.com/gabhub07</a></div></div>
+                    <div class="contact-item"><div class="contact-icon">📄</div><div><strong>CV</strong><br><a href="gab-cv.docx" download style="color: var(--light); text-decoration: none;">Download CV</a></div></div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Gabriel V. Israel. Built with passion and code.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Gabriel V. Israel. Built with passion, learning, and code.</p></footer>
     <script>
-        // Custom cursor
         const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.project-card, .skill-category').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add hover effect to project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
+        document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.style.animation = 'fadeInUp .75s ease forwards'; }); }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.project-card, .skill-category, .certificate-card, .timeline-item, .glass-card, .stat').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
-
-
